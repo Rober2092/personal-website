@@ -34,5 +34,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.52.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^10.4.0"
   }
 }
