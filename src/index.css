@@ -1,40 +1,30 @@
-body {
-  margin: 0;
-  font-family: 'Playfair Display', 'Helvetica Neue',
-    sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+    body {
+        @apply font-[Raleway];
+    }
+    li {
+        @apply px-4;
+        @apply cursor-pointer
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
 }
 
-.proj-img-wrap {
-  position: relative;
-}
-
-.proj-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: hidden;
-}
-
-.proj-overlay:hover {
-  visibility: visible;
-}
-
-.footer-btn:hover {
-  animation: footer-animate;
-}
-@keyframes footer-animate {
-  from {transform: translate(0,0);}
-  to {
-    transform: rotate(5deg); 
-    transform: scale(1.01);
-    transform: translate(0, 2px);
-  }
+.content-div:hover {
+    background-image: linear-gradient(
+        to right,
+        rgba(112, 157, 255, 0.8),
+        hsla(242, 74%, 61%, 0.8)   
+    )!important;
 }
