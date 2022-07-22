@@ -17,6 +17,15 @@ const Home = () => {
           I’m a full-stack web developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I’m focused on
           building responsive full-stack web applications.
+
+I have spent the last 10 years in the healthcare field working as a perinatal technician at UCLA health system.I have always had a
+knack for
+technology and working with computers. In 2021 I started
+working
+with HTML and CSS to make some minor edits on a small
+business website
+that I was operating. What I thought was just a few small edits turned into a love for programming.
+
         </p>
         <div>
           <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
