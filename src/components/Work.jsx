@@ -2,6 +2,45 @@ import React from 'react';
 import WorkImg from '../assets/workImg.jpeg';
 import realEstate from '../assets/realestate.jpg';
 
+const projects = [
+  {
+    title: 'E-commerce Back End',
+    img: WorkImg,
+    demoLink: '/',
+    codeLink: 'https://github.com/Rober2092/E-commerce-Back-End',
+  },
+  {
+    title: 'Cinema Ready App',
+    img: realEstate,
+    demoLink: 'https://rober2092.github.io/cinema-ready-app/',
+    codeLink: 'https://github.com/Rober2092/cinema-ready-app',
+  },
+  {
+    title: 'Notetaker',
+    img: WorkImg,
+    demoLink: 'https://notetaker-alvarado.herokuapp.com/',
+    codeLink: 'https://github.com/Rober2092/note-taker',
+  },
+  {
+    title: 'Weather Dashboard',
+    img: realEstate,
+    demoLink: 'https://rober2092.github.io/Server-Side-APIs-Weather-Dashboard/',
+    codeLink: 'https://github.com/Rober2092/Server-Side-APIs-Weather-Dashboard',
+  },
+  {
+    title: 'JavaScript Password Generator',
+    img: WorkImg,
+    demoLink: 'https://rober2092.github.io/javaScript-Password-Generator/',
+    codeLink: 'https://github.com/Rober2092/javaScript-Password-Generator',
+  },
+  {
+    title: 'Taskmaster Pro',
+    img: realEstate,
+    demoLink: 'https://rober2092.github.io/Taskmaster-pro/',
+    codeLink: 'https://github.com/Rober2092/Taskmaster-pro',
+  },
+];
+
 const Work = () => {
   return (
     <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
@@ -13,150 +52,34 @@ const Work = () => {
           <p className='py-6'>/ Check out some of my recent work</p>
         </div>
 
-{/* Container */}
+        {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-
-            {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                E-commerce back end
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='/'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rober2092/E-commerce-Back-End'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              style={{ backgroundImage: `url(${project.img})` }}
+              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+            >
+              {/* Hover Effects */}
+              <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center bg-black bg-opacity-70 rounded-md p-4'>
+                <span className='text-2xl font-bold text-white tracking-wider text-center'>
+                  {project.title}
+                </span>
+                <div className='pt-8 text-center'>
+                  <a href={project.demoLink}>
+                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                      Demo
+                    </button>
+                  </a>
+                  <a href={project.codeLink}>
+                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                      Code
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                cinema ready app
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://rober2092.github.io/cinema-ready-app/'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rober2092/cinema-ready-app'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-            {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                Notetaker
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://notetaker-alvarado.herokuapp.com/'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rober2092/note-taker'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                server side Apis Weather Dashboard
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://rober2092.github.io/Server-Side-APIs-Weather-Dashboard/'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rober2092/Server-Side-APIs-Weather-Dashboard'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-            {/* Grid Item */}
-          <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                javaScript Password Generator
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://rober2092.github.io/javaScript-Password-Generator/'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rober2092/javaScript-Password-Generator'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{ backgroundImage: `url(${realEstate})` }}
-            className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
-          >
-            {/* Hover Effects */}
-            <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-              Taskmaster-pro
-              </span>
-              <div className='pt-8 text-center'>
-                <a href='https://rober2092.github.io/Taskmaster-pro/'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Demo
-                  </button>
-                </a>
-                <a href='https://github.com/Rober2092/Taskmaster-pro'>
-                  <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                    Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
