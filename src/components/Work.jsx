@@ -58,21 +58,21 @@ const Work = () => {
             <div
               key={index}
               style={{ backgroundImage: `url(${project.img})` }}
-              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div bg-cover bg-center'
             >
               {/* Hover Effects */}
-              <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center bg-black bg-opacity-70 rounded-md p-4'>
+              <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center bg-pink-600 bg-opacity-70 rounded-md p-4'>
                 <span className='text-2xl font-bold text-white tracking-wider text-center'>
                   {project.title}
                 </span>
                 <div className='pt-8 text-center'>
                   <a href={project.demoLink}>
-                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-pink-700 hover:text-white transition-colors duration-300'>
                       Demo
                     </button>
                   </a>
                   <a href={project.codeLink}>
-                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-pink-700 hover:text-white transition-colors duration-300'>
                       Code
                     </button>
                   </a>
