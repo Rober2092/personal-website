@@ -17,7 +17,7 @@ const Navbar = () => {
 
       {/* Menu */}
       <ul className='hidden md:flex'>
-        {['home', 'about', 'skills', 'work', 'contact'].map((item) => (
+        {['home', 'about', 'skills', 'work', 'testimonials', 'portfolio', 'services', 'faq', 'newsletter', 'contact'].map((item) => (
           <li key={item} className='mx-4'>
             <Link
               to={item}
@@ -44,7 +44,7 @@ const Navbar = () => {
             : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
         }
       >
-        {['home', 'about', 'skills', 'work', 'contact'].map((item) => (
+        {['home', 'about', 'skills', 'work', 'testimonials', 'portfolio', 'services', 'faq', 'newsletter', 'contact'].map((item) => (
           <li key={item} className='py-6 text-4xl'>
             <Link
               onClick={handleClick}
