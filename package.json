@@ -13,6 +13,7 @@
     "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.6",
+    "react-tsparticles": "^2.12.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
