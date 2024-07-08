@@ -5,103 +5,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
-  body {
-    @apply font-[Raleway];
-  }
-  li {
-    @apply px-4 cursor-pointer;
-  }
+    body {
+        @apply font-[Raleway];
+    }
+    li {
+        @apply px-4 cursor-pointer;
+    }
 }
 
 .content-div {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
 }
 
 .content-div:hover {
-  background-image: linear-gradient(
-    to right,
-    rgba(112, 157, 225, 0.8),
-    hsla(242, 63%, 58%, 0.8)
-  ) !important;
+    background-image: linear-gradient(
+        to right,
+        rgba(112, 157, 225, 0.8),
+        hsla(242, 63%, 58%, 0.8)
+    ) !important;
 }
 
 .fixed {
-  position: fixed;
+    position: fixed;
 }
 
 .bottom-10 {
-  bottom: 2.5rem;
+    bottom: 2.5rem;
 }
 
 .right-10 {
-  right: 2.5rem;
+    right: 2.5rem;
 }
 
 .p-3 {
-  padding: 0.75rem;
+    padding: 0.75rem;
 }
 
 .rounded-full {
-  border-radius: 9999px;
+    border-radius: 9999px;
 }
 
 .bg-pink-600 {
-  background-color: #d53f8c;
+    background-color: #d53f8c;
 }
 
 .text-white {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .text-3xl {
-  font-size: 1.875rem;
+    font-size: 1.875rem;
 }
 
 .hover\:bg-pink-700:hover {
-  background-color: #b83280;
+    background-color: #b83280;
 }
 
 .transition {
-  transition-property: all;
+    transition-property: all;
 }
 
 .duration-300 {
-  transition-duration: 300ms;
+    transition-duration: 300ms;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 input,
 textarea {
-  transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
-  background-color: #e2e8f0;
-  transform: scale(1.02);
+    background-color: #e2e8f0;
+    transform: scale(1.02);
 }
 
 button {
-  transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-4xl {
+        font-size: 2.25rem;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+
+    .w-full {
+        width: 100%;
+    }
 }
