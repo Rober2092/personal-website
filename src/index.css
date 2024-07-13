@@ -129,49 +129,48 @@ button:hover {
         width: 100%;
     }
 }
-/* src/index.css */
 
 #tsparticles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
+
 .icon-hover:hover {
     color: #d53f8c;
-  }
-  /* src/index.css */
+}
+
 body {
     font-family: 'Raleway', sans-serif;
-  }
-  
-  .fixed {
+}
+
+.fixed {
     position: fixed;
-  }
-  
-  .bg-[#0a192f] {
+}
+
+.bg-[#0a192f] {
     background-color: #0a192f;
-  }
-  
-  .text-gray-300 {
+}
+
+.text-gray-300 {
     color: #d1d5db;
-  }
-  
-  .text-pink-600 {
+}
+
+.text-pink-600 {
     color: #d53f8c;
-  }
-  
-  .hover\:text-pink-600:hover {
+}
+
+.hover\:text-pink-600:hover {
     color: #d53f8c;
-  }
-  
-  .transition {
+}
+
+.transition {
     transition: all 0.3s ease;
-  }
-  
-  .duration-300 {
+}
+
+.duration-300 {
     transition-duration: 300ms;
-  }
-  
+}
