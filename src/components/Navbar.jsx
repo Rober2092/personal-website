@@ -106,47 +106,9 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Social Icons */}
-      <div className='lg:hidden fixed flex flex-row bottom-0 w-full justify-around bg-[#0a192f] p-4'>
-        {[
-          {
-            href: 'https://www.linkedin.com/in/hugo-alvarado-189481b0/',
-            label: 'LinkedIn',
-            icon: <FaLinkedin size={30} />,
-            bg: 'bg-blue-600',
-          },
-          {
-            href: 'https://github.com/Rober2092',
-            label: 'Github',
-            icon: <FaGithub size={30} />,
-            bg: 'bg-[#333333]',
-          },
-          {
-            href: 'mailto:rober2091@icloud.com',
-            label: 'Email',
-            icon: <HiOutlineMail size={30} />,
-            bg: 'bg-[#6fc2b0]',
-          },
-          {
-            href: 'https://www.dropbox.com/s/4g1rfdveaftk8yr/HugoAlvaradoResume.pdf?dl=0',
-            label: 'Resume',
-            icon: <BsFillPersonLinesFill size={30} />,
-            bg: 'bg-[#565f69]',
-          },
-        ].map(({ href, label, icon, bg }) => (
-          <a
-            key={label}
-            className={`${bg} p-2 rounded-full`}
-            href={href}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            {icon}
-          </a>
-        ))}
-      </div>
+      {/* Remove this section to hide social icons on mobile */}
     </div>
   );
 };
 
 export default Navbar;
-
