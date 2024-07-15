@@ -174,3 +174,39 @@ body {
 .duration-300 {
     transition-duration: 300ms;
 }
+/* src/components/CustomCursor.css */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(216, 19, 196); /* Change this to your desired cursor color */
+    border-radius: 50%;
+    pointer-events: none; /* Ensures the cursor does not interfere with other elements */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.15s ease;
+  }
+  body {
+    cursor: none; /* This hides the default cursor */
+  }
+  /* src/components/CustomCursor.css */
+/* src/components/CustomCursor.css */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #ec4899; /* Tailwind pink-500 */
+    border-radius: 50%;
+    pointer-events: none;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-cursor.hovered {
+    width: 30px;
+    height: 30px;
+    background-color: #db2777; /* Tailwind pink-600 */
+  }
+  

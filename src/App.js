@@ -15,11 +15,13 @@ import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import Newsletter from './components/Newsletter';
 import ParticlesBackground from './components/ParticlesBackground';
+import CustomCursor from './components/CustomCursor'; // Import CustomCursor
 
 function App() {
   return (
     <div className="relative">
       <ParticlesBackground />
+      <CustomCursor /> {/* Add CustomCursor here */}
       <div className="relative z-10">
         <Navbar />
         <Home />
