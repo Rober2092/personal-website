@@ -11,6 +11,7 @@ import GitHub from '../assets/github.png';
 import tailwind from '../assets/tailwind.png';
 import Mongo from '../assets/mongo.png';
 import mysql from '../assets/mysql.PNG';
+import NextJS from '../assets/nextjs.png'; // Import Next.js image with correct filename
 
 const skills = [
   { name: 'HTML', img: HTML },
@@ -24,6 +25,7 @@ const skills = [
   { name: 'Firebase', img: FireBase },
   { name: 'Tailwind', img: tailwind },
   { name: 'MySQL', img: mysql },
+  { name: 'Next.js', img: NextJS }, // Add Next.js to the skills array
 ];
 
 const Skills = () => {
