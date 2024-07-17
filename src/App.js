@@ -1,5 +1,3 @@
-// src/App.js
-
 import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -15,13 +13,14 @@ import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import Newsletter from './components/Newsletter';
 import ParticlesBackground from './components/ParticlesBackground';
-import CustomCursor from './components/CustomCursor'; // Import CustomCursor
+import CustomCursor from './components/CustomCursor';
+import Clients from './components/Clients'; // Import Clients
 
 function App() {
   return (
     <div className="relative">
       <ParticlesBackground />
-      <CustomCursor /> {/* Add CustomCursor here */}
+      <CustomCursor />
       <div className="relative z-10">
         <Navbar />
         <Home />
@@ -32,6 +31,7 @@ function App() {
         <Portfolio />
         <Services />
         <FAQ />
+        <Clients /> {/* Add Clients */}
         <Newsletter />
         <Contact />
         <BackToTop />

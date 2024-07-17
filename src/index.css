@@ -209,4 +209,12 @@ body {
     height: 30px;
     background-color: #db2777; /* Tailwind pink-600 */
   }
+  .client-icon {
+    color: rgb(255, 10, 141);
+    transition: color 0.3s ease;
+  }
+  
+  .client-icon:hover {
+    color: pink;
+  }
   
