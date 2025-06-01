@@ -43,38 +43,48 @@ const projects = [
 
 const Work = () => {
   return (
-    <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>
-            Work
+    <div name='work' className='w-full bg-gradient-to-b from-[#0a192f] to-[#0f2942] text-gray-300 py-24'>
+      <div className='max-w-[1200px] mx-auto px-6'>
+        <div className='flex flex-col items-center mb-16'>
+          <h2 className='text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500'>
+            Projects
+          </h2>
+          <div className='w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mb-6'></div>
+          <p className='text-xl text-gray-400 text-center max-w-2xl'>
+            A showcase of my recent work and personal projects
           </p>
-          <p className='py-6'>/ Check out some of my recent work</p>
         </div>
 
-        {/* Container */}
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projects.map((project, index) => (
             <div
               key={index}
-              style={{ backgroundImage: `url(${project.img})` }}
-              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div bg-cover bg-center'
+              className='group relative overflow-hidden rounded-2xl bg-[#1a2a3a]/50 backdrop-blur-sm border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 ease-in-out'
             >
-              {/* Hover Effects */}
-              <div className='opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center bg-pink-600 bg-opacity-70 rounded-md p-4'>
-                <span className='text-2xl font-bold text-white tracking-wider text-center'>
+              <div 
+                className='absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110'
+                style={{ backgroundImage: `url(${project.img})` }}
+              />
+              
+              <div className='absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+              
+              <div className='relative z-10 p-6 flex flex-col h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                <h3 className='text-2xl font-bold mb-4 text-white'>
                   {project.title}
-                </span>
-                <div className='pt-8 text-center'>
-                  <a href={project.demoLink}>
-                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-pink-700 hover:text-white transition-colors duration-300'>
-                      Demo
-                    </button>
+                </h3>
+                
+                <div className='mt-auto flex gap-4'>
+                  <a 
+                    href={project.demoLink}
+                    className='flex-1 text-center py-3 px-4 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium hover:opacity-90 transition-opacity duration-300'
+                  >
+                    Live Demo
                   </a>
-                  <a href={project.codeLink}>
-                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-pink-700 hover:text-white transition-colors duration-300'>
-                      Code
-                    </button>
+                  <a 
+                    href={project.codeLink}
+                    className='flex-1 text-center py-3 px-4 rounded-lg border border-pink-500/50 text-white font-medium hover:bg-pink-500/10 transition-colors duration-300'
+                  >
+                    View Code
                   </a>
                 </div>
               </div>

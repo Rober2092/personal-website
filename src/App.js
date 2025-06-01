@@ -15,6 +15,7 @@ import Newsletter from './components/Newsletter';
 import ParticlesBackground from './components/ParticlesBackground';
 import CustomCursor from './components/CustomCursor';
 import Clients from './components/Clients'; // Import Clients
+import FloatingSocials from './components/FloatingSocials'; // Import FloatingSocials
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Clients /> {/* Add Clients */}
         <Newsletter />
         <Contact />
+        <FloatingSocials />
         <BackToTop />
         <Footer />
       </div>
