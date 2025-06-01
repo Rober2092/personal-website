@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/hugowebs.jpg';
 import { Link } from 'react-scroll';
 
